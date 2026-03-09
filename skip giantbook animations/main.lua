@@ -11,14 +11,15 @@ if REPENTOGON then
     --print(giantbook, sprite:IsPlaying(), sprite:GetFilename(), sprite:GetAnimation(), sprite:GetFrame(), sprite.PlaybackSpeed)
     if sprite:IsPlaying() then
       if mod:isSkipTriggered() then
-        -- PlaybackSpeed seems to run any necessary triggers
-        -- unlike SetLastFrame which can skip triggers
+        -- PlaybackSpeed seems to trigger necessary events
+        -- unlike SetLastFrame which can skip events
         local currentFrame = sprite:GetFrame()
         sprite:SetLastFrame()
         local lastFrame = sprite:GetFrame()
         local diff = lastFrame - currentFrame
         sprite:SetFrame(currentFrame)
         if diff > 1 then
+          -- be careful: setting high values like 1000 can cause events to be triggered twice
           sprite.PlaybackSpeed = diff
         end
       end
