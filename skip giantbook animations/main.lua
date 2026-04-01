@@ -10,7 +10,7 @@ if REPENTOGON then
     local sprite = ItemOverlay.GetSprite()
     --print(giantbook, sprite:IsPlaying(), sprite:GetFilename(), sprite:GetAnimation(), sprite:GetFrame(), sprite.PlaybackSpeed)
     if sprite:IsPlaying() then
-      if mod:isSkipTriggered() then
+      if sprite:GetFrame() > 0 and mod:isSkipTriggered() then
         -- PlaybackSpeed seems to trigger necessary events
         -- unlike SetLastFrame which can skip events
         local currentFrame = sprite:GetFrame()
@@ -31,8 +31,7 @@ if REPENTOGON then
   -- ItemOverlay.GetPlayer doesn't seem to be reliable
   function mod:isSkipTriggered()
     local keyboard = 0
-    -- there's edge cases with space, just use enter for now
-    if Input.IsButtonTriggered(Keyboard.KEY_ENTER, keyboard) or Input.IsActionTriggered(ButtonAction.ACTION_DROP, keyboard) then
+    if Input.IsActionTriggered(ButtonAction.ACTION_MENUCONFIRM, keyboard) or Input.IsActionTriggered(ButtonAction.ACTION_DROP, keyboard) then
       return true
     end
     

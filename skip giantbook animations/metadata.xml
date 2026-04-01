@@ -3,7 +3,7 @@
     <name>Skip Giantbook Animations</name>
     <directory>skip giantbook animations</directory>
     <id>3681716665</id>
-    <description>The unskippable z...z...z... animation when you sleep in a bed has always annoyed me. This mod allows you to press A on your controller or enter on your keyboard to skip the animation. You can also press the drop key. As an added bonus, all other [url=https://repentogon.com/enums/Giantbook.html]giantbook[/url] animations can be skipped as well.
+    <description>The unskippable z...z...z... animation when you sleep in a bed has always annoyed me. This mod allows you to press A on your controller or enter/space on your keyboard to skip the animation. You can also press the drop key. As an added bonus, all other [url=https://repentogon.com/enums/Giantbook.html]giantbook[/url] animations can be skipped as well.
 
 This mod requires REPENTOGON.
 
@@ -11,7 +11,7 @@ This mod requires REPENTOGON.
 After I wrote this, I discovered that another version of this mod already exists: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3638449856]Giant Book Skipper[/url]. The code's different enough that I still decided to release my version, but feel free to use whichever one you want.
 
 There's also a similar [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3486542328]Customisable Giantbook Disabler[/url] mod.</description>
-    <version>1.3</version>
+    <version>1.4</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Tweaks"/>
